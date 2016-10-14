@@ -1,0 +1,11 @@
+##### Remove Duplicate characters form string 
+
+var a = "aabbbdddkjfljdkfhdjkfg";
+a = a.toLowerCase();
+var finalStr = "";
+while(a.length > 0) {
+  finalStr += a.charAt(0);
+  var regex = new RegExp(a.charAt(0), "g");
+  a = a.replace(regex, "");  
+}
+console.log("Final String : ", finalStr);

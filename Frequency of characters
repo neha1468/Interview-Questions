@@ -1,0 +1,29 @@
+#### Frequency of characters
+
+var a = "aaaaabbcddeebbccc";
+var finalStr  = "";
+a = a.toLowerCase();
+var c = a.charAt(0);
+
+for(var j = 1; j < a.length; j++) {
+  if (c.charAt(0) == a.charAt(j)) {
+    c += a.charAt(j);
+  } else {
+    finalStr += c.charAt(0);
+    if(c.length > 1) {
+      finalStr += c.length;
+    }    
+    c = a.charAt(j);
+  }
+  
+  if(j == (a.length - 1)) {
+      finalStr += c.charAt(0);
+    if(c.length > 1) {
+      finalStr += c.length;
+    }
+  }  
+  
+}
+
+console.log("Final String : ", finalStr);
+
